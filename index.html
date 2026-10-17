@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+        <div id="user-screen">
+            <h1>Who's practising?</h1>
+
+            <div id="user-list">
+                <button data-user="WMM">WMM</button>
+                <button data-user="MNM">MNM</button>
+                <button data-user="LRM">LRM</button>
+            </div>
+        </div>
+
+        <!-- MAIN MENU -->
+        <div id="menu">
+
+            <button id="change-user-button" class="parent-button">
+                Change user
+            </button>
+
+            <div id="exercise-list"></div>
+
+            <button id="parent-button" class="parent-button">
+                Parent Settings
+            </button>
+
+        </div>
+
+
+        <!-- EXERCISE SCREEN -->
+        <div id="exercise-screen" style="display: none;">
+
+            <button id="back-button">← Back</button>
+
+            <h2 id="exercise-heading">
+            <span id="exercise-title">Exercise 1</span>
+    –       <span id="skill-title">Easy addition</span>
+            </h2>
+
+            <div class="question">
+                <div class="questions" id="questions"></div>
+
+                <div class="sum" id="question"></div>
+
+                <input
+                    type="text"
+                    id="answer"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    autocomplete="off"
+                    readonly
+                >
+
+                <button id="submit">✓</button>
+            </div>
+
+            <div class="keypad">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>←</button>
+                <button>0</button>
+                <button>C</button>
+            </div>
+
+        </div>
+
+
+        <!-- PARENT SETTINGS -->
+        <div id="parent-screen" style="display: none;">
+            
+            <button id="parent-back-button">← Back</button>
+
+            <h1>Parent Settings</h1>
+
+            <h2>Today's Progress</h2>
+            
+            <button id="reset-today-button" class="parent-option">
+                Reset today's progress
+            </button>
+
+            <h2>Exercise</h2>
+
+            <label for="parent-user-select">
+                User
+            </label>
+
+            <select id="parent-user-select">
+            </select>
+
+            <select id="reset-exercise-select"></select>
+
+            <button id="reset-exercise-button" class="parent-option">
+                Reset this exercise
+            </button>
+
+
+            <h2>Testing</h2>
+
+            <button id="unlimited-button" class="parent-option">
+                Unlimited answers: OFF
+            </button>
+
+        </div>
+
+    </main>
+
+    <!-- Timer popup -->
+    <div id="timer-modal" class="timer-modal">
+        <div class="timer-box">
+            <p id="timer-message">Well done, 10 mins complete. Do you want to continue?</p>
+            <div class="timer-buttons">
+                <button id="timer-yes">Yes</button>
+                <button id="timer-no">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+
+    <!-- Timer popup -->
+    <div id="timer-modal" class="timer-modal">
+        <div class="timer-box">
+            <p id="timer-message">
+                Well done, 10 mins complete. Do you want to continue?
+            </p>
+
+            <div class="timer-buttons">
+                <button id="timer-yes">Yes</button>
+                <button id="timer-no">No</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
